@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+{% load staticfiles %} <!-- New line -->
+
+<html>
+
+    <head>
+        <title>Rango</title>
+    </head>
+
+    <body>
+        <h1>Rango says...</h1>
+        hello world!<br /> <strong>{{ boldmessage }}</strong><br />
+        <a href="/rango/about/">About</a><br />
+        <h3> Another body page could be found here: <a href="{{ googleLink }}"> Google </a></h3> <br />
+        <img src='{% static "limages/rango.jpg" %}' />
+    </body>
+
+</html>
