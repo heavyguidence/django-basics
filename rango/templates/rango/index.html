@@ -9,11 +9,15 @@
     </head>
 
     <body>
-        <h1>Rango says...</h1>
-        hello world!<br /> <strong>{{ boldmessage }}</strong><br />
-        <a href="/rango/about/">About</a><br />
-        <h3> Another body page could be found here: <a href="{{ googleLink }}"> Google </a></h3> <br />
-        <img src='{% static "limages/rango.jpg" %}' />
+        <h1>Rango says Hello world!</h1>
+        {% if categories %}
+        <ul>
+            {% for category in categories %}
+            <li> {{ category.name }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    <a href="/rango/about/">About</a>
     </body>
 
 </html>
